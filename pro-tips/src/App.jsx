@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import RegistrationForm from './components/RegistrationForm';
 import Contacts from './components/Contacts';
-import './App.css';
+import Home from './components/Home';
+
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <div>
         <Navbar />
         <Routes>
+        <Route path="/home" element={<Home />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/about" element={<RegistrationForm />} />
         </Routes>
@@ -21,3 +23,4 @@ const App = () => {
 };
 
 export default App;
+
